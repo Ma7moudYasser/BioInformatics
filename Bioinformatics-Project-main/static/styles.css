@@ -1,0 +1,44 @@
+body{
+    background: mediumblue;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 150px;
+  }
+  
+  .button {
+    padding: 10px 50px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .textbox {
+    width: 200px;
+    height: 25px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+  
+  .result-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #011602;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

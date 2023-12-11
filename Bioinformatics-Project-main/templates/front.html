@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  Load CSS in Flask with html-->
+    <link rel="stylesheet" href='/static/styles.css' />
+    <title>Bio informatics Calculator</title>
+    
+</head>
+<body>
+      <!-- Five buttons, one text box, and one result button -->
+      <div class="section">
+        <button type = 'button' onclick = 'show_sequence' class="button">Show sequence</button>
+        <button class="button">complement</button>
+        <button class="button">GC_content</button>
+        <button class="button">Reverse</button>
+        <button class="button">Translation</button>
+
+       
+        <form action="/result" method="post">
+            <input type="text" name="sequence" class = "textbox">
+            <button calss= "result-button" type="submit" value="Submit">
+          </form>
+          <input type="text" name= "sequence" id="text1" class="textbox">
+      </div>
+      <script>dateTextBox(){
+            var result = '{{ show_sequence() }}';
+            document.getElementById('text1').value = result;
+        }
+
+      </script>
+  
+      <!-- Two buttons with two text boxes and one result button -->
+      <div class="section">
+        <button class="button">Match</button>
+        <input type="text" id="text2" class="textbox">
+        <button class="button">Bad Chars</button>
+        <input type="text" id="text3" class="textbox">
+        <button class="result-button">Match Result</button>
+      </div>
+  
+      <!-- One button with two text boxes and one result button -->
+      <div class="section">
+        <button class="button">Distance</button>
+        <input type="text" id="text4" class="textbox">
+        <input type="text" id="text5" class="textbox">
+        <button class="result-button">Distance_result</button>
+      </div>
+  
+      <!-- One button with one text box and one result button -->
+      <div class="section">
+        <button class="button">Index sorted </button>
+        <input type="text" id="text6" class="textbox">
+        <input type="text" id="text7" class="textbox">
+        <button class="result-button">Index Sorted Result</button>
+      </div>
+
+      <div class="section">
+        <button class="button">Suffix Array </button>
+        <input type="text" id="text8" class="textbox">
+
+        <button class="result-button">Suffix Array Result</button>
+      </div>
+
+
+      
+      
+        
+    
+</body>
+</html>
